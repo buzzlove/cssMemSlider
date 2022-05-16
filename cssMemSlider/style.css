@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    height: 100vh;
+    display: flex;
+}
+
+.main{
+    max-width: 100rem;
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
+    flex-direction: column;    
+}
+.inputs {
+    display: none;
+}
+.mems {
+    display: flex;
+    overflow:hidden;
+    height: 50rem;   
+}
+
+.text {
+    display: flex;
+    overflow:hidden;
+    font-size: 2.0rem;
+    max-width: 40rem;
+    align-items: center;
+}
+.text__content { 
+    margin-right: 0.1rem;
+    min-width: 40rem;
+    transition: all 1s;
+    color: rgb(238, 238, 244);
+}
+
+.mem-image{
+    border-radius: 1rem;
+    height: 50rem;
+    width: 100rem;
+}
+.section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.controls {
+    display: flex;
+    gap: 0.5rem;
+}
+.controls div {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border: 0.1rem solid rgb(99, 99, 249);
+    background-color: rgb(99, 99, 249, 1);
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;  
+}
+
+.round:hover div{
+    background-color: rgb(238, 238, 244);
+    border: 0.1rem solid rgb(237, 237, 241);
+}
+
+.mems__position {
+    transition: all 1s;
+    width: 100rem;
+    transform: translateX(0%) ;
+}
+#mem1:checked ~ .mems > .mems__position{
+    transform: translateX(0%) ;
+}
+#mem2:checked ~ .mems > .mems__position{
+    transform: translateX(-100%);
+}
+#mem3:checked ~ .mems > .mems__position{
+    transform: translateX(-200%) ;
+}
+#mem4:checked ~ .mems > .mems__position{
+    transform: translateX(-300%) ;
+}
+
+#mem1:checked ~ .section > .text > .text__content{
+    transform: translateX(0) ;
+}
+#mem2:checked ~ .section > .text > .text__content{
+    transform: translateX(-40rem) ;
+}
+#mem3:checked ~ .section > .text > .text__content{
+    transform: translateX(-80rem) ;
+}
+#mem4:checked ~ .section > .text > .text__content{
+    transform: translateX(-120rem) ;
+}
+
+#mem1:checked ~ .section > .controls > label > .controls__first {
+    background-color: rgb(99, 99, 249, 0);
+}
+#mem2:checked ~ .section > .controls > label > .controls__second  {
+    background-color: rgb(99, 99, 249, 0);
+}
+#mem3:checked ~ .section > .controls > label > .controls__third {
+    background-color: rgb(99, 99, 249, 0);
+}
+#mem4:checked ~ .section > .controls > label > .controls__for {
+    background-color: rgb(99, 99, 249, 0);
+}
