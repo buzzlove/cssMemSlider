@@ -199,6 +199,9 @@ body {
     background-color: rgb(238, 238, 244);
     border: 0.1rem solid rgb(237, 237, 241);
 }
+.round:active div{
+    transform: scale(0.8);
+}
 .mems__position {
     transition: all 1s;
 }
